@@ -1,3 +1,3 @@
 export default function Navbar() {
-  return <div>Navbar</div>;
+  return <div className=" fixed w-full  h-20">Navbar</div>;
 }
