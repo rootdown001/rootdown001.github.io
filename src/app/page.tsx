@@ -1,5 +1,11 @@
-import Image from "next/image";
+import About from "./components/About";
+import Main from "./components/Main";
 
 export default function Home() {
-  return <div></div>;
+  return (
+    <>
+      <Main />
+      <About />
+    </>
+  );
 }
