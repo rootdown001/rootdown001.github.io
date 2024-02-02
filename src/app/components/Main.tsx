@@ -8,7 +8,7 @@ export default function Main() {
       <div className=" max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className=" uppercase text-sm tracking-widest text-gray-600">
-            I love beutiful code.
+            I love beautiful code.
           </p>
           <h1 className=" py-4 text-gray-700">
             Hi, I'm <span className="text-[#5651e5]">Lance</span>
