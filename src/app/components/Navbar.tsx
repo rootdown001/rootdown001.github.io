@@ -43,18 +43,18 @@ export default function Navbar() {
               <Link href="/">Home</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">About</Link>
+              <Link href="/#about">About</Link>
             </li>
 
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Skills</Link>
+              <Link href="/#skills">Skills</Link>
             </li>
 
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Projects</Link>
+              <Link href="/#projects">Projects</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Contact</Link>
+              <Link href="/#contact">Contact</Link>
             </li>
           </ul>
           <div
