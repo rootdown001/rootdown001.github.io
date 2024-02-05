@@ -43,7 +43,7 @@ export default function Navbar() {
         <div>
           <ul className=" hidden md:flex">
             <li className="ml-10 text-sm uppercase hover:border-b">
-              <Link href="/">Home</Link>
+              <Link href="/#home">Home</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#about">About</Link>
