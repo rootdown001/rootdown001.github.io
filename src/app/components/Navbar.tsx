@@ -6,14 +6,36 @@ import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const router = useRouter();
+  const pathname = usePathname();
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  useEffect(() => {
+    // console.log("pathname: ", pathname);
+    if (
+      pathname === "/property" ||
+      pathname === "/crypto" ||
+      pathname === "/netflix" ||
+      pathname === "/twitch"
+    ) {
+      setNavBg("transparent");
+      setLinkColor("#ecf0f3");
+    } else {
+      setNavBg("#ecf0f3");
+      setLinkColor("#1f2937");
+    }
+  }, [pathname]);
 
   // empty dependency array so runs just on load (for navbar shadow)
   useEffect(() => {
@@ -29,6 +51,7 @@ export default function Navbar() {
 
   return (
     <div
+      style={{ background: `${navBg}` }}
       className={
         shadow
           ? "fixed w-full  h-20 shadow-xl z-[100]"
@@ -41,7 +64,7 @@ export default function Navbar() {
         </Link>
 
         <div>
-          <ul className=" hidden md:flex">
+          <ul style={{ color: `${linkColor}` }} className=" hidden md:flex">
             <li className="ml-10 text-sm uppercase hover:border-b">
               <Link href="/#home">Home</Link>
             </li>
