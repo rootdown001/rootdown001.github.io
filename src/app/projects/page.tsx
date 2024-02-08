@@ -1,5 +1,5 @@
 import Image from "next/image";
-import propertyImg from "/public/assets/projects/property.jpg";
+import calanderImg from "/public/assets/projects/calander.png";
 import cryptoImg from "/public/assets/projects/crypto.jpg";
 import netflixImg from "/public/assets/projects/netflix.jpg";
 import twitchImg from "/public/assets/projects/twitch.jpg";
@@ -17,10 +17,10 @@ export default function Projects() {
         <h2 className="py-4">Some Projects I've Built.</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
-            title="Property Finder"
-            backgroundImg={propertyImg}
-            framework="React JS"
-            projectUrl="/property"
+            title="Google Calander Clone"
+            backgroundImg={calanderImg}
+            framework="React JS / TypeScript / Vite"
+            projectUrl="/calander"
           />
           <ProjectItem
             title="Crypto App"
