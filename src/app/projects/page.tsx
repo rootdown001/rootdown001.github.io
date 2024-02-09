@@ -1,10 +1,8 @@
-import Image from "next/image";
 import calanderImg from "/public/assets/projects/calander.png";
-import cryptoImg from "/public/assets/projects/crypto.jpg";
+import blogImg from "/public/assets/projects/blog.png";
 import netflixImg from "/public/assets/projects/netflix.jpg";
 import twitchImg from "/public/assets/projects/twitch.jpg";
 
-import Link from "next/link";
 import ProjectItem from "../components/ProjectItem";
 
 export default function Projects() {
@@ -23,10 +21,10 @@ export default function Projects() {
             projectUrl="/calander"
           />
           <ProjectItem
-            title="Crypto App"
-            backgroundImg={cryptoImg}
+            title="React Blog"
+            backgroundImg={blogImg}
             framework="React JS"
-            projectUrl="/crypto"
+            projectUrl="/blog"
           />
           <ProjectItem
             title="Movie Finder"
