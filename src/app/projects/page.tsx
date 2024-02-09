@@ -12,6 +12,7 @@ export default function Projects() {
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Projects
         </p>
+        {/*  eslint-disable-next-line react/no-unescaped-entities */}
         <h2 className="py-4">Some Projects I've Built.</h2>
         <div className="grid md:grid-cols-2 gap-8">
           <ProjectItem
