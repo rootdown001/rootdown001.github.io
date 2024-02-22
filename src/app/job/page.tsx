@@ -1,9 +1,10 @@
 import Image from "next/image";
-import twitchImg from "/public/assets/projects/twitch.jpg";
-import { RiRadioButtonFill } from "react-icons/ri";
+import jobImg from "/public/assets/projects/jobBoard.png";
+import { RiRadioButtonFill, RiCheckboxFill } from "react-icons/ri";
+import { HiCheck } from "react-icons/hi";
 import Link from "next/link";
 
-export default function Twitch() {
+export default function Job() {
   return (
     <div className=" w-full">
       <div className=" w-screen h-[30vh] lg:h-[40vh] relative">
@@ -12,12 +13,12 @@ export default function Twitch() {
           className=" absolute z-1"
           layout="fill"
           objectFit="cover"
-          src={twitchImg}
+          src={jobImg}
           alt="/"
         />
         <div className=" absolute top-[70%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
-          <h2 className="py-2">Twitch Project</h2>
-          <h3>React JS / Tailwind / Firebase</h3>
+          <h2 className="py-2">Job Board</h2>
+          <h3>Under Construction - React JS / Typescript / SQLLite</h3>
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
@@ -29,30 +30,31 @@ export default function Twitch() {
             features, cool things about it, obstacles you hade to overcome,
             technologies, etc.
           </p>
-          <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className=" px-8 py-2 mt-4">Code</button>
+          <button className="px-8 py-2 mt-4 mr-8 bg-gradient-to-r  from-gray-400 to-gray-300 text-slate-800">
+            Currently Building
+          </button>
+          <button className=" px-8 py-2 mt-4 from-gray-400 to-gray-300 text-slate-800">
+            Currently Building
+          </button>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
-          <div className="p-2">
-            <p className="text-center font-bold pb-2">Technologies</p>
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-2 ">
+          <div className="pt-2">
+            <p className="text-center font-bold pb-1">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiCheckboxFill className="pr-1 text-theme-color" /> React
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwind
+                <RiCheckboxFill className="pr-1 text-theme-color" /> Tailwind
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> JavaScript
+                <RiCheckboxFill className="pr-1 text-theme-color" /> Vite
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Firebase
+                <RiCheckboxFill className="pr-1 text-theme-color" /> SQLLite
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Google API
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Zillow API
+                <RiCheckboxFill className="pr-1 text-theme-color" /> Stripe
               </p>
             </div>
           </div>

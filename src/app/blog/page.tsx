@@ -1,6 +1,7 @@
 import Image from "next/image";
 import blogImg from "/public/assets/projects/blog.png";
-import { RiRadioButtonFill } from "react-icons/ri";
+import { RiRadioButtonFill, RiCheckboxFill } from "react-icons/ri";
+import { HiCheck } from "react-icons/hi";
 import Link from "next/link";
 
 export default function Blog() {
@@ -29,30 +30,28 @@ export default function Blog() {
             features, cool things about it, obstacles you hade to overcome,
             technologies, etc.
           </p>
-          <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className=" px-8 py-2 mt-4">Code</button>
+          <Link href="https://blog-project-adv.netlify.app/" target="_blank">
+            <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
+          </Link>
+          <Link
+            href="https://github.com/rootdown001/blog-project-adv"
+            target="_blank"
+          >
+            <button className=" px-8 py-2 mt-4">Code</button>
+          </Link>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
-          <div className="p-2">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-2">
+          <div className="pt-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiCheckboxFill className="pr-1 text-theme-color" /> JavaScript
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwind
+                <RiCheckboxFill className="pr-1 text-theme-color" /> React
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> JavaScript
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Firebase
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Google API
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Zillow API
+                <RiCheckboxFill className="pr-1 text-theme-color" /> JSONServer
               </p>
             </div>
           </div>

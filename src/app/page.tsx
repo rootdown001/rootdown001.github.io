@@ -4,6 +4,8 @@ import Main from "./main/page";
 import Projects from "./projects/page";
 import Skills from "./skills/page";
 
+const themeColor = "#4B61A6";
+
 export default function Home() {
   return (
     <>

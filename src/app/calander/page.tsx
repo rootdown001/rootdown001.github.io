@@ -1,6 +1,11 @@
 import Image from "next/image";
 import calanderImg from "/public/assets/projects/calander.png";
-import { RiRadioButtonFill } from "react-icons/ri";
+import {
+  RiRadioButtonFill,
+  RiCodeSSlashFill,
+  RiCheckboxFill,
+} from "react-icons/ri";
+import { HiCheck, HiOutlineCheck } from "react-icons/hi";
 import Link from "next/link";
 
 export default function Calander() {
@@ -29,30 +34,31 @@ export default function Calander() {
             features, cool things about it, obstacles you hade to overcome,
             technologies, etc.
           </p>
-          <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
-          <button className=" px-8 py-2 mt-4">Code</button>
+          <Link href="https://calendarclonela.netlify.app/" target="_blank">
+            <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
+          </Link>
+          <Link
+            href="https://github.com/rootdown001/calender-clone"
+            target="_blank"
+          >
+            <button className=" px-8 py-2 mt-4">Code</button>
+          </Link>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-4">
-          <div className="p-2">
+        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-2">
+          <div className="pt-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> React
+                <RiCheckboxFill className="pr-1 text-theme-color" /> JavaScript
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Tailwind
+                <RiCheckboxFill className="pr-1 text-theme-color" /> React
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> JavaScript
+                <RiCheckboxFill className="pr-1 text-theme-color" /> Typescript
               </p>
               <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Firebase
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Google API
-              </p>
-              <p className=" text-gray-600 py-2 flex items-center">
-                <RiRadioButtonFill className="pr-1" /> Zillow API
+                <RiCheckboxFill className="pr-1 text-theme-color" /> Tailwind
               </p>
             </div>
           </div>

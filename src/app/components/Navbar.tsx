@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import navLogo from "/public/assets/icons8-image-placeholder-96.png";
+import navLogo from "/public/assets/lance8.png";
 import Link from "next/link";
 import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from "react-icons/ai";
-import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { FaDev, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -25,9 +25,9 @@ export default function Navbar() {
     // console.log("pathname: ", pathname);
     if (
       pathname === "/calander" ||
-      pathname === "/crypto" ||
-      pathname === "/netflix" ||
-      pathname === "/twitch"
+      pathname === "/blog" ||
+      pathname === "/portfolio" ||
+      pathname === "/job"
     ) {
       setNavBg("transparent");
       setLinkColor("#ecf0f3");
@@ -60,7 +60,7 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center w-full h-full px-2 2xl:px-16">
         <Link href="/">
-          <Image src={navLogo} alt="/" width="90" />
+          <Image src={navLogo} alt="/" width={200} />
         </Link>
 
         <div>
@@ -106,17 +106,19 @@ export default function Navbar() {
           <div>
             <div className="flex w-full items-center justify-between">
               <Link href="/">
-                <Image src={navLogo} alt="/" width={87} height={35} />
+                <Image src={navLogo} alt="/" width={200} />
               </Link>
               <div
-                className=" rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer"
+                className=" rounded-full shadow-md shadow-gray-400 p-2 cursor-pointer"
                 onClick={handleNav}
               >
-                <AiOutlineClose />
+                <AiOutlineClose size={10} />
               </div>
             </div>
             <div className="border-b border-gray-300 my-4">
-              <p className="w-[85%] md:w-[90%] py-4">I love beutiful code.</p>
+              <p className="w-[85%] md:w-[90%] py-4  text-theme-color/70">
+                I love beutiful code.
+              </p>
             </div>
             <div className=" py-4 flex flex-col">
               <ul className=" uppercase">
@@ -147,7 +149,8 @@ export default function Navbar() {
                 </Link>
               </ul>
               <div className=" pt-40">
-                <p className=" uppercase tracking-widest text-[#5651e5]">
+                <p className=" uppercase tracking-widest text-theme-color">
+                  {/* eslint-disable-next-line react/no-unescaped-entities */}
                   Let's connect.
                 </p>
                 <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
@@ -162,6 +165,19 @@ export default function Navbar() {
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
                     <Link href="https://github.com/rootdown001" target="_blank">
                       <FaGithub />
+                    </Link>
+                  </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <Link href="https://dev.to/rootdown001" target="_blank">
+                      <FaDev />
+                    </Link>
+                  </div>
+                  <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
+                    <Link
+                      href="https://twitter.com/rootdown001"
+                      target="_blank"
+                    >
+                      <FaXTwitter />
                     </Link>
                   </div>
                   <div className="rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer hover:scale-105 ease-in duration-300">
