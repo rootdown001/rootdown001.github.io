@@ -25,9 +25,12 @@ export default function Contact() {
           {/* left */}
           <div className="col-span-3 md:col-span-1 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 rounded-md p-4">
             <div className="lg:p-4 h-full">
-              <div className="w-full h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-30">
-                <Image className="rounded-md" src={contactImg} alt="/" />
+              <div className="p-2">
+                <div className="w-full h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-30">
+                  <Image className="rounded-md" src={contactImg} alt="/" />
+                </div>
               </div>
+
               <div>
                 <div className="flex items-center pt-4">
                   <h2 className=" py-2">Lance Anderson</h2>
