@@ -12,7 +12,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="w-full lg:h-screen mx-1"
+      className="w-full md:h-screen mx-1"
       style={{ scrollMarginTop: "40px" }}
     >
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
@@ -21,16 +21,12 @@ export default function Contact() {
         </p>
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         <h2 className=" py-4">Let's Connect!</h2>
-        <div className="grid mx-1 lg:grid-cols-5 gap-8">
+        <div className="grid mx-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* left */}
-          <div className="col-span-3 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 rounded-md p-4">
+          <div className="col-span-3 md:col-span-1 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 rounded-md p-4">
             <div className="lg:p-4 h-full">
-              <div>
-                <Image
-                  className="rounded-md hover:scale-105 ease-in duration-300"
-                  src={contactImg}
-                  alt="/"
-                />
+              <div className="w-full h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-30">
+                <Image className="rounded-md" src={contactImg} alt="/" />
               </div>
               <div>
                 <div className="flex items-center pt-4">
@@ -111,7 +107,7 @@ export default function Contact() {
           {/* right */}
           <div
             id="form"
-            className="col-span-3 w-full h-auto shadow-lg shadow-gray-400 rounded-md lg:p-4"
+            className=" col-span-3 md:col-span-1 lg:col-span-3  w-full h-auto shadow-lg shadow-gray-400 rounded-md lg:p-4"
             style={{ scrollMarginTop: "80px" }}
           >
             <div className="p-4">
