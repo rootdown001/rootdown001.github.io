@@ -21,7 +21,7 @@ export default function Main() {
             products with great user experiences. I am currently also building
             my skills in back-end and Solidity for web-3 technologies.
           </p>
-          <div className="flex items-center justify-between max-w-[440px] m-auto py-4">
+          <div className="flex items-center justify-between max-w-[440px] m-auto py-4 px-4">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <Link href="https://www.linkedin.com/in/nwpgpc/" target="_blank">
                 <FaLinkedinIn />
