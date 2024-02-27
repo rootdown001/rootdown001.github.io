@@ -1,7 +1,7 @@
 import Image from "next/image";
 import AboutImg from "/public/assets/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg";
 import Link from "next/link";
-import LanceImg from "/public/assets/lance-no-bg.png";
+import LanceImg from "/public/assets/lance_kitty.png";
 
 export default function About() {
   return (
@@ -16,33 +16,37 @@ export default function About() {
             About
           </p>
           <div className="flex items-center">
-            <h2 className=" py-4">A Little About Me...</h2>
-            <div className="ml-4 px-2 border-2 border-black/20 rounded-md shadow-lg  hover:scale-105 ease-in duration-300">
-              <Image src={LanceImg} className="rounded-md" alt="/" width={36} />
+            <h2 className=" py-4">A Little About Me.</h2>
+            <div className="ml-4  rounded-md shadow-lg  hover:scale-105 ease-in duration-300">
+              <Image src={LanceImg} className="rounded-md" alt="/" width={90} />
             </div>
           </div>
 
-          <p className=" py-2 text-gray-600">
-            -- My path is somewhat unique --
+          <p className="py-2 uppercase text-sm tracking-widest text-theme-color/60">
+            From healthcare to coding
           </p>
-          <p className=" py-2 text-gray-600">
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Here is some text about me. It isn't good text, and will need to be
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            changed to something informative and clever. I'm really just typing,
-            thinking of words to write. This will all be changed later. I hope
-            noone is reading this. That would be really embarassing.
+          <p className=" pt-2 text-gray-600">
+            I grew up in San Francisco and was coding for fun starting in the
+            8th grade. I received a BA in Biology from the University of
+            California at Santa Barbara; while there, I took many computer
+            science classes, and I graduated with Highest Honors. I decided to
+            enter the healthcare field, and did my graduate work at Michigan
+            State University. I took more computer science classes there, and
+            also graduated at the top of my class.
           </p>
-          <p className=" py-2 text-gray-600">
-            I was born one day. It was in July. July 5th 1968 to be exact. I
-            went to school. Then more school. It was really a lot of school. :))
-            I lived in San Francisco and then Santa Barbara. I spent summers in
-            Placerveille. I finished college in Santa Barbara, then moved to
-            Michigan. After medical school, I moved to Portland Oregon.
+          <br />
+          <p className=" text-gray-600">
+            I loved helping people in the healthcare field; however, I found
+            myself constantly wanting to continue creating and maintaining a
+            large database I had built for our office. Everywhere I looked, I
+            was seeing opportunities for creating apps that would be helpful to
+            others. I decided to return to my first love, computer programming.
+            After examining my goals for development, I immersed myself in
+            Javascript, Typescript, Advanced React, and Next.js.
           </p>
           <Link href="#projects">
-            <p className=" py-2 text-gray-600 underline cursor-pointer">
-              View some projects on which I have worked.
+            <p className=" py-3 text-gray-600 underline cursor-pointer">
+              A few projects on which I have worked.
             </p>
           </Link>
         </div>

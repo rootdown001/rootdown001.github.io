@@ -5,7 +5,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import LanceImg from "/public/assets/lance-no-bg.png";
+import LanceImg from "/public/assets/lance_kitty.png";
 import { FaDev, FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
@@ -34,16 +34,16 @@ export default function Contact() {
               <div>
                 <div className="flex items-center pt-4">
                   <h2 className=" py-2">Lance Anderson</h2>
-                  <div className="ml-6 px-2 border-2 border-black/20 rounded-md hover:scale-105 ease-in duration-300">
+                  <div className="ml-4  rounded-md shadow-lg  hover:scale-105 ease-in duration-300">
                     <Image
                       src={LanceImg}
                       className="rounded-md"
                       alt="/"
-                      width={36}
+                      width={90}
                     />
                   </div>
                 </div>
-                <h3 className="lg:mt-2">Web & App Developer</h3>
+                <h3 className="pt-2 lg:mt-2">Web & App Developer</h3>
 
                 {/* <div>
                 <h2 className=" py-2">Lance Anderson</h2>

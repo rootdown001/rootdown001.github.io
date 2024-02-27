@@ -22,7 +22,7 @@ export default function Projects() {
           <ProjectItem
             title="Google Calander Clone"
             backgroundImg={calanderImg}
-            framework="React JS / TypeScript"
+            framework="React JS / TypeScript / Vite"
             projectUrl="/calander"
           />
           <ProjectItem
@@ -34,13 +34,13 @@ export default function Projects() {
           <ProjectItem
             title="React Blog"
             backgroundImg={blogImg}
-            framework="React JS"
+            framework="React JS / Vite"
             projectUrl="/blog"
           />
           <ProjectItem
             title="Portfolio Site"
             backgroundImg={portfolioImg}
-            framework="React JS / Next JS"
+            framework="React JS / Tailwind / Next JS"
             projectUrl="/portfolio"
           />
         </div>

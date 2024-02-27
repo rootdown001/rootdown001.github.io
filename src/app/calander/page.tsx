@@ -25,14 +25,34 @@ export default function Calander() {
           <h3>React JS / Typescript / Vite</h3>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5">
         <div className=" col-span-4">
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className="pb-2">Project Overview</h2>
           <p>
-            This is some text to be an overview of the project. Can list
-            features, cool things about it, obstacles you hade to overcome,
-            technologies, etc.
+            This project is a calendar application aimed at replicating some
+            functionalities of Google Calendar. Although a simplified version,
+            it presented a significant complexity and offered a chance to use
+            React and TypeScript for complex UI interactions.
+          </p>
+          <br />
+          <p>
+            The Calendar component serves as the centerpiece, rendering the
+            current month by default. Users can easily create new events,
+            triggering a modal form with fields for event details such as name,
+            time, and color. The form includes validation logic, ensuring
+            essential fields are filled correctly. Additionally, events are
+            sorted and displayed within the calendar view, with options to edit
+            or delete them via modals.
+          </p>
+          <br />
+          <p>
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
+            One of the project's challenges involves managing overflow events,
+            ensuring smooth rendering and interaction. This includes dynamically
+            updating the display when the calendar is resized or when the number
+            of events changes. Implementing animations for modal opening and
+            closing adds a polished touch to the user experience, enhancing the
+            overall feel of the application.
           </p>
           <Link href="https://calendarclonela.netlify.app/" target="_blank">
             <button className=" px-8 py-2 mt-4 mr-8">Demo</button>
@@ -44,7 +64,7 @@ export default function Calander() {
             <button className=" px-8 py-2 mt-4">Code</button>
           </Link>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-2">
+        <div className="col-span-4 md:col-span-1 shadow-lg shadow-gray-400 rounded-md p-2">
           <div className="pt-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">

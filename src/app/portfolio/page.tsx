@@ -18,18 +18,21 @@ export default function Portfolio() {
         />
         <div className=" absolute top-[70%] max-w-[1240px] w-full left-[50%] translate-x-[-50%] translate-y-[-50%] text-white z-10 p-2">
           <h2 className="py-2">Portfolio Site</h2>
-          <h3>React JS / Next JS</h3>
+          <h3>React JS / Tailwind / Next JS</h3>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5">
         <div className=" col-span-4">
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className="pb-2">Project Overview</h2>
           <p>
-            This is some text to be an overview of the project. Can list
-            features, cool things about it, obstacles you hade to overcome,
-            technologies, etc.
+            This portfolio project is built in React and Typescript, using the
+            Next.js framework. Specifically, it uses the /app features of
+            Next.js for routing, as well as client-side and server-side
+            rendering. For the CSS styling, Tailwind is used, as well as some
+            global CSS styling in globals.css and tailwind.config.ts.
           </p>
+          <br />
+          <p></p>
 
           <button className=" px-8 py-2 mt-4 mr-8 from-gray-400 to-gray-300 text-slate-800">
             Current Site
@@ -42,7 +45,7 @@ export default function Portfolio() {
             <button className=" px-8 py-2 mt-4">Code</button>
           </Link>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-xl shadow-gray-400 rounded-xl p-2">
+        <div className="col-span-4 md:col-span-1 shadow-lg shadow-gray-400 rounded-md p-2">
           <div className="pt-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">

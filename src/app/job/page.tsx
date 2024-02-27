@@ -21,15 +21,30 @@ export default function Job() {
           <h3>Under Construction - React JS / Typescript / SQLLite</h3>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-8">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5">
         <div className=" col-span-4">
-          <p>Project</p>
-          <h2>Overview</h2>
+          <h2 className="pb-2">Project Overview</h2>
           <p>
-            This is some text to be an overview of the project. Can list
-            features, cool things about it, obstacles you hade to overcome,
-            technologies, etc.
+            This project is a job board that is built upon an existing codebase.
+            I tackled this because it presented a unique approach to
+            development, mirroring real-world scenarios where understanding
+            existing codebases and independently solving tasks are crucial
+            skills. It began with a codebase filled with complexity, reflecting
+            the challenges of a mature project. This complexity served as an
+            opportunity for growth, as deciphering and building upon existing
+            structures is a fundamental aspect of professional development.
           </p>
+          <br />
+
+          <p>
+            The backend is handled by the Prisma library and a well documented
+            API. The main focus is frontend development using React with Vite.
+            The project leverages libraries such as React Router, React Hook
+            Form, and Zod, enhancing efficiency and functionality. In summary,
+            this project allows being immersed in the complexities and nuances
+            of real-world development.
+          </p>
+
           <button className="px-8 py-2 mt-4 mr-8 bg-gradient-to-r  from-gray-400 to-gray-300 text-slate-800">
             Currently Building
           </button>
