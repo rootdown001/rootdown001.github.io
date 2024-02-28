@@ -7,13 +7,14 @@ import tailwindImg from "/public/assets/skills/tailwind.png";
 import typescriptImg from "/public/assets/skills/typescript-icon.svg";
 import githubImg from "/public/assets/skills/github.svg";
 import nextImg from "/public/assets/skills/next-js.svg";
-import mongoImg from "/public/assets/skills/mongo-svgrepo-com.svg";
 import sqlLiteImg from "/public/assets/skills/sqlite-svgrepo-com.svg";
-import nodeImg from "/public/assets/skills/nodejs-icon-svgrepo-com.svg";
 
 export default function Skills() {
   return (
-    <div id="skills" className="mx-1 w-full lg:h-screen p-2">
+    <div
+      id="skills"
+      className="mx-1 w-full lg:h-screen p-2 scroll-mt-28 md:scroll-mt-28 lg:scroll-mt-0 "
+    >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
         <p className=" text-xl tracking-widest uppercase text-theme-color">
           Skills
@@ -94,32 +95,6 @@ export default function Skills() {
               </div>
               <div className="flex flex-col items-center justify-center">
                 <h3>Github</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <h2 className="mt-4 py-4">Skills Under Construction.</h2>
-
-        <div className=" grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div className=" mx-2 p-6 shadow-lg rounded-md hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={nodeImg} width="64" height="64" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>Node.js</h3>
-              </div>
-            </div>
-          </div>
-
-          <div className="mx-2 p-6 shadow-lg rounded-md hover:scale-105 ease-in duration-300">
-            <div className="grid grid-cols-2 gap-4 justify-center items-center">
-              <div className="m-auto">
-                <Image src={mongoImg} width="64" height="64" alt="/" />
-              </div>
-              <div className="flex flex-col items-center justify-center">
-                <h3>MongoDB</h3>
               </div>
             </div>
           </div>

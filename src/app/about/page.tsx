@@ -7,8 +7,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="w-full md:h-screen mx-1 p-2 flex items-center py-16"
-      style={{ scrollMarginTop: "40px" }}
+      className="w-full md:h-screen mx-1 p-2 flex items-center py-16 scroll-mt-28 md:scroll-mt-28 lg:scroll-mt-0"
     >
       <div className="mx-1 max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className=" col-span-2">
@@ -50,8 +49,8 @@ export default function About() {
             </p>
           </Link>
         </div>
-        <div className="p-2">
-          <div className="w-full h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-300">
+        <div className="p-2 mt-2 md:mt-0 mx-auto">
+          <div className="w-full max-w-[360px]  h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-300">
             <Image src={AboutImg} className=" rounded-md" alt="/" />
           </div>
         </div>

@@ -9,7 +9,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="w-full mx-1"
+      className="w-full mx-1 md:h-screen scroll-mt-28 md:scroll-mt-28 lg:scroll-mt-0"
       style={{ scrollMarginTop: "40px" }}
     >
       <div className="max-w-[1240px] mx-auto px-2 py-16">

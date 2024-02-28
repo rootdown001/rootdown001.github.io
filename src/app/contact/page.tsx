@@ -26,13 +26,13 @@ export default function Contact() {
           <div className="col-span-3 md:col-span-1 lg:col-span-2 w-full h-full shadow-lg shadow-gray-400 rounded-md p-4">
             <div className="lg:p-4 h-full">
               <div className="p-2">
-                <div className="w-full h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-30">
+                <div className="w-full max-w-[480px] h-auto m-auto shadow-lg shadow-gray-400 rounded-md flex items-center justify-center p-3 hover:scale-105 ease-in duration-30">
                   <Image className="rounded-md" src={contactImg} alt="/" />
                 </div>
               </div>
 
               <div>
-                <div className="flex items-center pt-4">
+                <div className="flex mt-2 items-center pt-4">
                   <h2 className=" py-2">Lance Anderson</h2>
                   <div className="ml-4  rounded-md shadow-lg  hover:scale-105 ease-in duration-300">
                     <Image
@@ -60,8 +60,7 @@ export default function Contact() {
                 </div> */}
 
                 <p className="py-4 ">
-                  This is some fake text for my contact section. This will be
-                  replaced.
+                  Feel free to contact me through any of these methods.
                 </p>
               </div>
               <div>
