@@ -1,7 +1,7 @@
 import Image from "next/image";
-import AboutImg from "/nextjs-github-pages/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg";
+import AboutImg from "/public/assets/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg";
 import Link from "next/link";
-import LanceImg from "/nextjs-github-pages/lance_kitty.png";
+import LanceImg from "/public/assets/lance_kitty.png";
 
 export default function About() {
   return (
