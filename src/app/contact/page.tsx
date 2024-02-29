@@ -124,6 +124,7 @@ export default function Contact() {
                       name="name"
                       type="text"
                       className=" border-2 rounded-md p-3 flex border-gray-300"
+                      placeholder="Your name"
                     />
                   </div>
                   <div className="flex flex-col">
