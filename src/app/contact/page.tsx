@@ -116,40 +116,58 @@ export default function Contact() {
               <form>
                 <div className="grid md:grid-cols-2 gap-4 w-full py-2">
                   <div className="flex flex-col">
-                    <label className=" uppercase text-sm py-2">Name</label>
+                    <label htmlFor="name" className="uppercase text-sm py-2">
+                      Name
+                    </label>
                     <input
-                      className=" border-2 rounded-md p-3 flex border-gray-300"
+                      id="name"
+                      name="name"
                       type="text"
+                      className=" border-2 rounded-md p-3 flex border-gray-300"
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className=" uppercase text-sm py-2">
+                    <label htmlFor="phone" className=" uppercase text-sm py-2">
                       Phone Number
                     </label>
                     <input
-                      className=" border-2 rounded-md p-3 flex border-gray-300"
-                      type="text"
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      className="border-2 rounded-md p-3 flex border-gray-300"
                     />
                   </div>
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className=" uppercase text-sm py-2">Email</label>
+                  <label htmlFor="email" className="uppercase text-sm py-2">
+                    Email
+                  </label>
                   <input
-                    className=" border-2 rounded-md p-3 flex border-gray-300"
+                    id="email"
+                    name="email"
+                    className="border-2 rounded-md p-3 flex border-gray-300"
                     type="email"
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className=" uppercase text-sm py-2">Subject</label>
+                  <label htmlFor="subject" className="uppercase text-sm py-2">
+                    Subject
+                  </label>
                   <input
-                    className=" border-2 rounded-md p-3 flex border-gray-300"
+                    id="subject"
+                    name="subject"
+                    className="border-2 rounded-md p-3 flex border-gray-300"
                     type="text"
                   />
                 </div>
                 <div className="flex flex-col py-2">
-                  <label className=" uppercase text-sm py-2">Message</label>
+                  <label htmlFor="message" className="uppercase text-sm py-2">
+                    Message
+                  </label>
                   <textarea
-                    className=" border-2 rounded-md p-3 border-gray-300"
+                    id="message"
+                    name="message"
+                    className="border-2 rounded-md p-3 border-gray-300"
                     rows={10}
                   ></textarea>
                 </div>
