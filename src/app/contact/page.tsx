@@ -16,10 +16,10 @@ export default function Contact() {
   const TEMPLATE_ID = "template_eyvyyj8";
   const PUBLIC_KEY = "fiS8A6xT7PAAr5fyK";
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then(
       (result) => {
         console.log(result.text);
         alert("Message Sent Successfully");
@@ -29,7 +29,7 @@ export default function Contact() {
         alert("Something went wrong!");
       }
     );
-    e.target.reset();
+    e.currentTarget.reset();
   }
 
   return (
