@@ -114,7 +114,7 @@ export default function Contact() {
           >
             <div className="p-4">
               <form>
-                <div className="grid md:grid-cols-2 gap-4 w-full py-2">
+                <div className="grid  gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label htmlFor="name" className="uppercase text-sm py-2">
                       Name
@@ -127,17 +127,6 @@ export default function Contact() {
                       placeholder="Your name"
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <label htmlFor="phone" className=" uppercase text-sm py-2">
-                      Phone Number
-                    </label>
-                    <input
-                      id="phone"
-                      name="phone"
-                      type="tel"
-                      className="border-2 rounded-md p-3 flex border-gray-300"
-                    />
-                  </div>
                 </div>
                 <div className="flex flex-col py-2">
                   <label htmlFor="email" className="uppercase text-sm py-2">
@@ -148,6 +137,7 @@ export default function Contact() {
                     name="email"
                     className="border-2 rounded-md p-3 flex border-gray-300"
                     type="email"
+                    placeholder="Your email"
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -159,6 +149,7 @@ export default function Contact() {
                     name="subject"
                     className="border-2 rounded-md p-3 flex border-gray-300"
                     type="text"
+                    placeholder="Subject"
                   />
                 </div>
                 <div className="flex flex-col py-2">
@@ -170,6 +161,7 @@ export default function Contact() {
                     name="message"
                     className="border-2 rounded-md p-3 border-gray-300"
                     rows={10}
+                    placeholder="Message"
                   ></textarea>
                 </div>
                 <button className="w-full p-4 text-gray-100 mt-4">
