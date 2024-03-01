@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Lance | React Developer",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <div>{children}</div>
+        <SpeedInsights />
       </body>
     </html>
   );
