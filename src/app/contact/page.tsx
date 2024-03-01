@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import contactImg from "/public/assets/freestocks-mw6Onwg4frY-unsplash.jpg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
@@ -7,8 +8,30 @@ import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import LanceImg from "/public/assets/lance_kitty.png";
 import { FaDev, FaXTwitter } from "react-icons/fa6";
+import { useRef } from "react";
+import emailjs from "emailjs-com";
 
 export default function Contact() {
+  const SERVICE_ID = "service_ppdx02h";
+  const TEMPLATE_ID = "template_eyvyyj8";
+  const PUBLIC_KEY = "fiS8A6xT7PAAr5fyK";
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        alert("Message Sent Successfully");
+      },
+      (error) => {
+        console.log(error.text);
+        alert("Something went wrong!");
+      }
+    );
+    e.target.reset();
+  }
+
   return (
     <div
       id="contact"
@@ -97,11 +120,6 @@ export default function Contact() {
                     <AiOutlineMail />
                   </a>
                 </div>
-                <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
-                  <Link href="/#form">
-                    <BsFillPersonLinesFill />
-                  </Link>
-                </div>
               </div>
             </div>
           </div>
@@ -113,7 +131,7 @@ export default function Contact() {
             style={{ scrollMarginTop: "80px" }}
           >
             <div className="p-4">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="grid  gap-4 w-full py-2">
                   <div className="flex flex-col">
                     <label htmlFor="name" className="uppercase text-sm py-2">
@@ -121,7 +139,7 @@ export default function Contact() {
                     </label>
                     <input
                       id="name"
-                      name="name"
+                      name="sender_name"
                       type="text"
                       className=" border-2 rounded-md p-3 flex border-gray-300"
                       placeholder="Your name"
@@ -134,7 +152,7 @@ export default function Contact() {
                   </label>
                   <input
                     id="email"
-                    name="email"
+                    name="sender_email"
                     className="border-2 rounded-md p-3 flex border-gray-300"
                     type="email"
                     placeholder="Your email"
