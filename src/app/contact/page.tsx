@@ -3,20 +3,26 @@ import Image from "next/image";
 import contactImg from "/public/assets/freestocks-mw6Onwg4frY-unsplash.jpg";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import Link from "next/link";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import LanceImg from "/public/assets/lance_kitty.png";
 import { FaDev, FaXTwitter } from "react-icons/fa6";
-import { useRef } from "react";
 import emailjs from "emailjs-com";
+import { useForm } from "react-hook-form";
+import FormGroup from "../components/FormGroup";
 
 export default function Contact() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
   const SERVICE_ID = "service_ppdx02h";
   const TEMPLATE_ID = "template_eyvyyj8";
   const PUBLIC_KEY = "fiS8A6xT7PAAr5fyK";
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then(
@@ -131,57 +137,69 @@ export default function Contact() {
             style={{ scrollMarginTop: "80px" }}
           >
             <div className="p-4">
-              <form onSubmit={handleSubmit}>
-                <div className="grid  gap-4 w-full py-2">
-                  <div className="flex flex-col">
-                    <label htmlFor="name" className="uppercase text-sm py-2">
-                      Name
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <FormGroup>
+                  <div className="grid  gap-4 w-full py-2">
+                    <div className="flex flex-col">
+                      <label htmlFor="name" className="uppercase text-sm py-2">
+                        Name
+                      </label>
+                      <input
+                        id="name"
+                        name="sender_name"
+                        type="text"
+                        className=" border-2 rounded-md p-3 flex border-gray-300"
+                        placeholder="Your name"
+                      />
+                    </div>
+                  </div>
+                </FormGroup>
+
+                <FormGroup>
+                  <div className="flex flex-col py-2">
+                    <label htmlFor="email" className="uppercase text-sm py-2">
+                      Email
                     </label>
                     <input
-                      id="name"
-                      name="sender_name"
-                      type="text"
-                      className=" border-2 rounded-md p-3 flex border-gray-300"
-                      placeholder="Your name"
+                      id="email"
+                      name="sender_email"
+                      className="border-2 rounded-md p-3 flex border-gray-300"
+                      type="email"
+                      placeholder="Your email"
                     />
                   </div>
-                </div>
-                <div className="flex flex-col py-2">
-                  <label htmlFor="email" className="uppercase text-sm py-2">
-                    Email
-                  </label>
-                  <input
-                    id="email"
-                    name="sender_email"
-                    className="border-2 rounded-md p-3 flex border-gray-300"
-                    type="email"
-                    placeholder="Your email"
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label htmlFor="subject" className="uppercase text-sm py-2">
-                    Subject
-                  </label>
-                  <input
-                    id="subject"
-                    name="subject"
-                    className="border-2 rounded-md p-3 flex border-gray-300"
-                    type="text"
-                    placeholder="Subject"
-                  />
-                </div>
-                <div className="flex flex-col py-2">
-                  <label htmlFor="message" className="uppercase text-sm py-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    className="border-2 rounded-md p-3 border-gray-300"
-                    rows={10}
-                    placeholder="Message"
-                  ></textarea>
-                </div>
+                </FormGroup>
+
+                <FormGroup>
+                  <div className="flex flex-col py-2">
+                    <label htmlFor="subject" className="uppercase text-sm py-2">
+                      Subject
+                    </label>
+                    <input
+                      id="subject"
+                      name="subject"
+                      className="border-2 rounded-md p-3 flex border-gray-300"
+                      type="text"
+                      placeholder="Subject"
+                    />
+                  </div>
+                </FormGroup>
+
+                <FormGroup>
+                  <div className="flex flex-col py-2">
+                    <label htmlFor="message" className="uppercase text-sm py-2">
+                      Message
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      className="border-2 rounded-md p-3 border-gray-300"
+                      rows={10}
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+                </FormGroup>
+
                 <button className="w-full p-4 text-gray-100 mt-4">
                   Send Message
                 </button>
