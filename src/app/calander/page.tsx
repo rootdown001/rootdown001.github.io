@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import calanderImg from "/public/assets/projects/calander.png";
 import {
@@ -7,11 +8,32 @@ import {
 } from "react-icons/ri";
 import { HiCheck, HiOutlineCheck } from "react-icons/hi";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Calander() {
+  const [shadow, setShadow] = useState(false);
+
+  // empty dependency array so runs just on load (for navbar shadow)
+  // useEffect(() => {
+  //   const handleShadow = () => {
+  //     if (window.scrollY >= 300) {
+  //       setShadow(true);
+  //     } else {
+  //       setShadow(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleShadow);
+  // }, []);
+
   return (
     <div className=" w-full">
-      <div className=" w-screen h-[30vh] lg:h-[40vh] fixed">
+      <div
+        className={
+          shadow
+            ? "w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"
+            : "w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"
+        }
+      >
         <div className=" absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           className=" absolute z-1"
@@ -35,6 +57,44 @@ export default function Calander() {
             React and TypeScript for complex UI interactions.
           </p>
           <br />
+          <p>
+            The Calendar component serves as the centerpiece, rendering the
+            current month by default. Users can easily create new events,
+            triggering a modal form with fields for event details such as name,
+            time, and color. The form includes validation logic, ensuring
+            essential fields are filled correctly. Additionally, events are
+            sorted and displayed within the calendar view, with options to edit
+            or delete them via modals.
+          </p>
+          <p>
+            The Calendar component serves as the centerpiece, rendering the
+            current month by default. Users can easily create new events,
+            triggering a modal form with fields for event details such as name,
+            time, and color. The form includes validation logic, ensuring
+            essential fields are filled correctly. Additionally, events are
+            sorted and displayed within the calendar view, with options to edit
+            or delete them via modals.
+          </p>
+          <p>
+            The Calendar component serves as the centerpiece, rendering the
+            current month by default. Users can easily create new events,
+            triggering a modal form with fields for event details such as name,
+            time, and color. The form includes validation logic, ensuring
+            essential fields are filled correctly. Additionally, events are
+            sorted and displayed within the calendar view, with options to edit
+            or delete them via modals.
+          </p>
+          <p>
+            The Calendar component serves as the centerpiece, rendering the
+            current month by default. Users can easily create new events,
+            triggering a modal form with fields for event details such as name,
+            time, and color. The form includes validation logic, ensuring
+            essential fields are filled correctly. Additionally, events are
+            sorted and displayed within the calendar view, with options to edit
+            or delete them via modals.
+          </p>
+          <br />
+
           <p>
             The Calendar component serves as the centerpiece, rendering the
             current month by default. Users can easily create new events,

@@ -14,6 +14,7 @@ export default function Navbar() {
   const [shadow, setShadow] = useState(false);
   const [navBg, setNavBg] = useState("#ecf0f3");
   const [linkColor, setLinkColor] = useState("#1f2937");
+  const [inProject, setInProject] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -31,19 +32,24 @@ export default function Navbar() {
     ) {
       setNavBg("transparent");
       setLinkColor("#ecf0f3");
+      setInProject(true);
     } else {
       setNavBg("#ecf0f3");
       setLinkColor("#1f2937");
+      setInProject(false);
     }
-  }, [pathname]);
+    console.log("project: ", inProject);
+  }, [pathname, inProject]);
 
   // empty dependency array so runs just on load (for navbar shadow)
   useEffect(() => {
     const handleShadow = () => {
       if (window.scrollY >= 90) {
         setShadow(true);
+        console.log("shadow");
       } else {
         setShadow(false);
+        console.log("no shadow");
       }
     };
     window.addEventListener("scroll", handleShadow);
@@ -53,7 +59,7 @@ export default function Navbar() {
     <div
       style={{ background: `${navBg}` }}
       className={
-        shadow
+        !inProject && shadow
           ? "fixed w-full  h-20 shadow-xl z-[100]"
           : "fixed w-full  h-20 z-[100]"
       }

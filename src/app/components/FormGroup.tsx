@@ -1,8 +1,9 @@
-export function FormGroup({ errorMessage = "", children }) {
-  return (
-    <div className={`form-group ${errorMessage.length > 0 ? "error" : ""}`}>
-      {children}
-      {errorMessage.length > 0 && <div className="msg">{errorMessage}</div>}
-    </div>
-  );
+import { ReactNode } from "react";
+
+type FormGroupProps = {
+  children: ReactNode;
+};
+
+export default function FormGroup({ children }: FormGroupProps) {
+  return <div>{children}</div>;
 }

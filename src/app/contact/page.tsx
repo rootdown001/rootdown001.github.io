@@ -10,32 +10,41 @@ import { FaDev, FaXTwitter } from "react-icons/fa6";
 import emailjs from "emailjs-com";
 import { useForm } from "react-hook-form";
 import FormGroup from "../components/FormGroup";
+import { useRef } from "react";
+
+type FormFields = {
+  sender_name: string;
+  sender_email: string;
+  subject: string;
+  message: string;
+};
 
 export default function Contact() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm<FormFields>();
+
+  const formRef = useRef<HTMLFormElement>(null);
 
   const SERVICE_ID = "service_ppdx02h";
   const TEMPLATE_ID = "template_eyvyyj8";
   const PUBLIC_KEY = "fiS8A6xT7PAAr5fyK";
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.currentTarget, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        alert("Message Sent Successfully");
-      },
-      (error) => {
-        console.log(error.text);
-        alert("Something went wrong!");
-      }
-    );
-    e.currentTarget.reset();
+  function onSubmit(data: FormFields) {
+    if (formRef.current !== null) {
+      emailjs
+        .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+        .then(
+          (result) => {
+            alert("Message Sent Successfully");
+          },
+          (error) => {
+            alert("Something went wrong!");
+          }
+        );
+    }
   }
 
   return (
@@ -137,7 +146,7 @@ export default function Contact() {
             style={{ scrollMarginTop: "80px" }}
           >
             <div className="p-4">
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
                 <FormGroup>
                   <div className="grid  gap-4 w-full py-2">
                     <div className="flex flex-col">
