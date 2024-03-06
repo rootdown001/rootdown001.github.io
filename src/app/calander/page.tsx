@@ -11,29 +11,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Calander() {
-  const [shadow, setShadow] = useState(false);
-
-  // empty dependency array so runs just on load (for navbar shadow)
-  // useEffect(() => {
-  //   const handleShadow = () => {
-  //     if (window.scrollY >= 300) {
-  //       setShadow(true);
-  //     } else {
-  //       setShadow(false);
-  //     }
-  //   };
-  //   window.addEventListener("scroll", handleShadow);
-  // }, []);
-
   return (
     <div className=" w-full">
-      <div
-        className={
-          shadow
-            ? "w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"
-            : "w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"
-        }
-      >
+      <div className={"w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"}>
         <div className=" absolute top-0 left-0 w-full h-[30vh] lg:h-[40vh] bg-black/80 z-10" />
         <Image
           className=" absolute z-1"
@@ -47,8 +27,8 @@ export default function Calander() {
           <h3>React JS / Typescript / Vite</h3>
         </div>
       </div>
-      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5">
-        <div className=" col-span-4">
+      <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5 ">
+        <div className=" mt-[210px] col-span-4">
           <h2 className="pb-2">Project Overview</h2>
           <p>
             This project is a calendar application aimed at replicating some
@@ -57,44 +37,6 @@ export default function Calander() {
             React and TypeScript for complex UI interactions.
           </p>
           <br />
-          <p>
-            The Calendar component serves as the centerpiece, rendering the
-            current month by default. Users can easily create new events,
-            triggering a modal form with fields for event details such as name,
-            time, and color. The form includes validation logic, ensuring
-            essential fields are filled correctly. Additionally, events are
-            sorted and displayed within the calendar view, with options to edit
-            or delete them via modals.
-          </p>
-          <p>
-            The Calendar component serves as the centerpiece, rendering the
-            current month by default. Users can easily create new events,
-            triggering a modal form with fields for event details such as name,
-            time, and color. The form includes validation logic, ensuring
-            essential fields are filled correctly. Additionally, events are
-            sorted and displayed within the calendar view, with options to edit
-            or delete them via modals.
-          </p>
-          <p>
-            The Calendar component serves as the centerpiece, rendering the
-            current month by default. Users can easily create new events,
-            triggering a modal form with fields for event details such as name,
-            time, and color. The form includes validation logic, ensuring
-            essential fields are filled correctly. Additionally, events are
-            sorted and displayed within the calendar view, with options to edit
-            or delete them via modals.
-          </p>
-          <p>
-            The Calendar component serves as the centerpiece, rendering the
-            current month by default. Users can easily create new events,
-            triggering a modal form with fields for event details such as name,
-            time, and color. The form includes validation logic, ensuring
-            essential fields are filled correctly. Additionally, events are
-            sorted and displayed within the calendar view, with options to edit
-            or delete them via modals.
-          </p>
-          <br />
-
           <p>
             The Calendar component serves as the centerpiece, rendering the
             current month by default. Users can easily create new events,
@@ -124,7 +66,7 @@ export default function Calander() {
             <button className=" px-8 py-2 mt-4">Code</button>
           </Link>
         </div>
-        <div className="col-span-4 md:col-span-1 shadow-lg shadow-gray-400 rounded-md p-2">
+        <div className="mt-[210px] col-span-4 md:col-span-1 shadow-lg shadow-gray-400 rounded-md p-2">
           <div className="pt-2">
             <p className="text-center font-bold pb-2">Technologies</p>
             <div className=" grid grid-cols-3 md:grid-cols-1">
