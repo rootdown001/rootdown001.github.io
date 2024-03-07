@@ -25,7 +25,7 @@ export default function ProjectDisplay({
         </div>
       </div>
       <div className="max-w-[1240px] mx-auto p-2 grid md:grid-cols-5 gap-8 pt-5 ">
-        <div className=" sm:mt-[270px]  lg:mt-[360px] col-span-4">
+        <div className=" mt-[230px]  lg:mt-[360px] col-span-4">
           <h2 className="pb-2">Project Overview</h2>
           <p>
             This project is a calendar application aimed at replicating some
