@@ -6,7 +6,7 @@ type ProjectDisplayProps = {
   projectImg: StaticImageData;
   title: string;
   subtitle: string;
-  description: string;
+  description: string[];
 };
 
 export default function ProjectDisplay({
