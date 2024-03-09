@@ -1,13 +1,20 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { RiCheckboxFill } from "react-icons/ri";
+
+type ProjectDisplayProps = {
+  projectImg: StaticImageData;
+  title: string;
+  subtitle: string;
+  description: string;
+};
 
 export default function ProjectDisplay({
   projectImg,
   title,
   subtitle,
   description,
-}) {
+}: ProjectDisplayProps) {
   return (
     <div className=" w-full">
       <div className={"w-screen h-[30vh] lg:h-[40vh] fixed z-[90]"}>
