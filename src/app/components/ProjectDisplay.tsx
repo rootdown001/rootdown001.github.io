@@ -14,6 +14,8 @@ type ProjectDisplayProps = {
   hrefCode: string;
   targetCode: string;
   tech: string[];
+  altDemo: string;
+  altCode: string;
 };
 
 export default function ProjectDisplay({
@@ -26,9 +28,13 @@ export default function ProjectDisplay({
   hrefCode,
   targetCode,
   tech,
+  altDemo,
+  altCode,
 }: ProjectDisplayProps) {
   const [demo, setDemo] = useState(false);
   const [code, setCode] = useState(false);
+  const [demoBtn, setDemoBtn] = useState(false);
+  const [codeBtn, setCodeBtn] = useState(false);
 
   useEffect(() => {
     if (hrefDemo !== "") {
@@ -37,7 +43,13 @@ export default function ProjectDisplay({
     if (hrefCode !== "") {
       setCode(true);
     }
-  }, [hrefDemo, hrefCode]);
+    if (altDemo !== "") {
+      setDemoBtn(true);
+    }
+    if (altCode !== "") {
+      setCodeBtn(true);
+    }
+  }, [hrefDemo, hrefCode, altDemo, altCode]);
 
   return (
     <div className=" w-full">
@@ -69,12 +81,12 @@ export default function ProjectDisplay({
           })}
           <Link href={demo ? `${hrefDemo}` : "#"} target={`${targetDemo}`}>
             <button disabled={!demo} className="px-8 py-2 mt-4 mr-8">
-              Demo
+              {demoBtn ? `${altDemo}` : "Demo"}
             </button>
           </Link>
           <Link href={code ? `${hrefCode}` : "#"} target={`${targetCode}`}>
             <button disabled={!code} className=" px-8 py-2 mt-4">
-              Code
+              {codeBtn ? `${altCode}` : "Code"}
             </button>
           </Link>
         </div>
