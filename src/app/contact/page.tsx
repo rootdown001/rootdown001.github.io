@@ -23,6 +23,7 @@ export default function Contact() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<FormFields>();
 
@@ -39,6 +40,7 @@ export default function Contact() {
         .then(
           (result) => {
             alert("Message Sent Successfully");
+            reset();
           },
           (error) => {
             alert("Something went wrong!");
@@ -155,10 +157,10 @@ export default function Contact() {
                       </label>
                       <input
                         id="name"
-                        name="sender_name"
                         type="text"
                         className=" border-2 rounded-md p-3 flex border-gray-300"
                         placeholder="Your name"
+                        {...register("sender_name")}
                       />
                     </div>
                   </div>
@@ -171,10 +173,10 @@ export default function Contact() {
                     </label>
                     <input
                       id="email"
-                      name="sender_email"
                       className="border-2 rounded-md p-3 flex border-gray-300"
                       type="email"
                       placeholder="Your email"
+                      {...register("sender_email")}
                     />
                   </div>
                 </FormGroup>
@@ -186,10 +188,10 @@ export default function Contact() {
                     </label>
                     <input
                       id="subject"
-                      name="subject"
                       className="border-2 rounded-md p-3 flex border-gray-300"
                       type="text"
                       placeholder="Subject"
+                      {...register("subject")}
                     />
                   </div>
                 </FormGroup>
@@ -201,10 +203,10 @@ export default function Contact() {
                     </label>
                     <textarea
                       id="message"
-                      name="message"
                       className="border-2 rounded-md p-3 border-gray-300"
                       rows={10}
                       placeholder="Message"
+                      {...register("message")}
                     ></textarea>
                   </div>
                 </FormGroup>
