@@ -15,7 +15,7 @@ export default function Blog() {
     "In the project, user convenience is enhanced by integrating filtering options on the 'Posts' page, enabling users to sift through posts by query or even by the user who authored them. It also includes features like disabling submit buttons during form submission and robust validation checks to ensure data integrity, including mandatory fields such as title, body, and user information. This project encapsulates the essence of user-centric design and robust functionality.",
   ];
   // demo link
-  const hrefDemo = "https://blog-project-adv.netlify.app/posts";
+  const hrefDemo = "https://blog-project-adv.netlify.app";
   // demo target
   const targetDemo = "_blank";
   // alternative demo button
