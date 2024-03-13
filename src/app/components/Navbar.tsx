@@ -25,7 +25,7 @@ export default function Navbar() {
   useEffect(() => {
     // console.log("pathname: ", pathname);
     if (
-      pathname === "/calander" ||
+      pathname === "/calendar" ||
       pathname === "/blog" ||
       pathname === "/portfolio" ||
       pathname === "/job"

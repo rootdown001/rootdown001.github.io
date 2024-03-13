@@ -1,12 +1,12 @@
-import calanderImg from "/public/assets/projects/calander.png";
+import calendarImg from "/public/assets/projects/calendar.png";
 import ProjectDisplay from "../components/ProjectDisplay";
 
-export default function Calander() {
-  // info for calander
+export default function Calendar() {
+  // info for calendar
   // image
-  const projectImg = calanderImg;
+  const projectImg = calendarImg;
   // title
-  const title = "Google Calander Clone";
+  const title = "Google Calendar Clone";
   // subtitle
   const subtitle = "React / Typescript / Vite";
   // desciption array
@@ -22,7 +22,7 @@ export default function Calander() {
   // alternative demo button
   const altDemo = "";
   // code link
-  const hrefCode = "https://github.com/rootdown001/calender-clone";
+  const hrefCode = "https://github.com/rootdown001/calendar-clone";
   // code target
   const targetCode = "_blank";
   // alternative code button

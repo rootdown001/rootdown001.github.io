@@ -2,7 +2,7 @@ import jobImg from "/public/assets/projects/jobBoard.png";
 import ProjectDisplay from "../components/ProjectDisplay";
 
 export default function Job() {
-  // info for calander
+  // info for job
   // image
   const projectImg = jobImg;
   // title

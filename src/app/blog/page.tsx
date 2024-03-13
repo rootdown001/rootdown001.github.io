@@ -2,7 +2,7 @@ import blogImg from "/public/assets/projects/blog.png";
 import ProjectDisplay from "../components/ProjectDisplay";
 
 export default function Blog() {
-  // info for calander
+  // info for blog
   // image
   const projectImg = blogImg;
   // title

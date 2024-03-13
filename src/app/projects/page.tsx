@@ -1,4 +1,4 @@
-import calanderImg from "/public/assets/projects/calander.png";
+import calendarImg from "/public/assets/projects/calendar.png";
 import blogImg from "/public/assets/projects/blog.png";
 import jobImg from "/public/assets/projects/jobBoard.png";
 import portfolioImg from "/public/assets/projects/portfolio.png";
@@ -20,10 +20,10 @@ export default function Projects() {
         <h2 className="py-4">Some Projects I've Built.</h2>
         <div className="mx-1 grid md:grid-cols-2 gap-8">
           <ProjectItem
-            title="Google Calander Clone"
-            backgroundImg={calanderImg}
+            title="Google Calendar Clone"
+            backgroundImg={calendarImg}
             framework="React JS / TypeScript / Vite"
-            projectUrl="/calander"
+            projectUrl="/calendar"
           />
           <ProjectItem
             title="Job Board"

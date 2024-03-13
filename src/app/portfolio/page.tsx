@@ -2,7 +2,7 @@ import portfolioImg from "/public/assets/projects/portfolio.png";
 import ProjectDisplay from "../components/ProjectDisplay";
 
 export default function Portfolio() {
-  // info for calander
+  // info for portfolio
   // image
   const projectImg = portfolioImg;
   // title
