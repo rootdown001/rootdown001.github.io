@@ -52,7 +52,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="w-full md:h-screen mx-1"
+      className="w-full md:h-screen scroll-mt-28 md:scroll-mt-28 lg:scroll-mt-0 mx-1 mt-10"
       style={{ scrollMarginTop: "40px" }}
     >
       <div className="max-w-[1240px] m-auto px-2 py-16 w-full">
