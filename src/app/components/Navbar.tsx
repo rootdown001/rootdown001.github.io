@@ -82,7 +82,7 @@ export default function Navbar() {
               <Link href="/#skills">Skills</Link>
             </li>
 
-            <li className="ml-10 text-sm uppercase hover:border-b">
+            <li className="ml-10 text-sm uppercase hover:border-b animate-bounce1">
               <Link href="/#projects">Projects</Link>
             </li>
             <li className="ml-10 text-sm uppercase hover:border-b">
