@@ -2,6 +2,7 @@ import calendarImg from "/public/assets/projects/calendar.png";
 import blogImg from "/public/assets/projects/blog.png";
 import jobImg from "/public/assets/projects/jobBoard.png";
 import portfolioImg from "/public/assets/projects/portfolio.png";
+import dappImg from "/public/assets/projects/dapp2.png";
 
 import ProjectItem from "../components/ProjectItem";
 
@@ -20,6 +21,12 @@ export default function Projects() {
         <h2 className="py-4">Some Projects I've Built.</h2>
         <div className="mx-1 grid md:grid-cols-2 gap-8">
           <ProjectItem
+            title="Send ETH dApp"
+            backgroundImg={dappImg}
+            framework="React JS / TypeScript / Next.js"
+            projectUrl="/dapp"
+          />
+          <ProjectItem
             title="Google Calendar Clone"
             backgroundImg={calendarImg}
             framework="React JS / TypeScript / Vite"
@@ -37,12 +44,12 @@ export default function Projects() {
             framework="React JS / Vite"
             projectUrl="/blog"
           />
-          <ProjectItem
+          {/* <ProjectItem
             title="Portfolio Site"
             backgroundImg={portfolioImg}
             framework="React JS / Tailwind / Next JS"
             projectUrl="/portfolio"
-          />
+          /> */}
         </div>
       </div>
     </div>
